@@ -57,10 +57,39 @@
             }
             
         } /* End of Media Query */
+        .nav-links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f0f0f0; 
+            border-bottom: 2px solid #ddd;
+        }
+        .nav-links a {
+            padding: 8px 12px;
+            background-color: #4CAF50; 
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #388e3c; 
+        }
     </style>
 </head>
 <body>
-
+    <div class="nav-links">
+        <!-- Back to Lab Manual Index (at: 7th Semester/Web Technologies/) -->
+        <a href="../../Web_Technologies_index.html">&larr; Back to Lab Index</a>
+        
+        <!-- Back to Root Hub (at: /) -->
+        <a href="../../../index.html">Home Hub &rarr;</a>
+    </div>
+    
     <h1 style="text-align: center;">Experiment 6: Web Responsiveness</h1>
     <hr>
 
@@ -94,5 +123,6 @@
         <li>The layout and/or styling must change when viewed on a mobile-sized screen.</li>
         <li>Include screenshots of **Desktop View** and **Mobile View** in your report.</li>
     </ol>
+    
 </body>
 </html>
