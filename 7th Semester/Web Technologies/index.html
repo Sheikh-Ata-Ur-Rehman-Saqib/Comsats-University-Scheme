@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Technologies Lab Manual - Main Index</title>
+    <!-- ESSENTIAL for Responsiveness (Lab 6) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Internal CSS using Flexbox and Media Queries (Labs 4, 5, 6) -->
+    <style>
+        /* BASE STYLES */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e8f5e9; /* Light Green/Mint */
+            color: #212121;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* FLEXBOX LAYOUT (Desktop/Wide View) */
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* HEADER STYLING */
+        .header {
+            background-color: #004d40; /* Dark Teal */
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header h2 {
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        /* NAVIGATION/INFO STYLING */
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            background-color: #4db6ac; /* Medium Teal */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .nav-link:hover {
+            background-color: #00796b; /* Darker Teal on hover */
+        }
+        
+        /* EXPERIMENTS GRID (Main Content Area) */
+        .experiments-grid {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            gap: 20px;
+            padding: 20px 0;
+        }
+        
+        .lab-card {
+            flex: 1 1 300px; /* Flexbox: grow, shrink, base width. Items will not shrink below 300px wide */
+            background-color: white;
+            border: 1px solid #b2dfdb;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        .lab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .lab-card h3 {
+            color: #004d40;
+            border-bottom: 1px dashed #e0f2f1;
+            padding-bottom: 10px;
+        }
+        .lab-link {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        .lab-link:hover {
+            text-decoration: underline;
+        }
+
+        /* MEDIA QUERY: Mobile View (Lab 6) */
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .experiments-grid {
+                /* On mobile, items will stack automatically due to flex-wrap: wrap */
+                flex-direction: column; 
+            }
+            .lab-card {
+                flex: 1 1 100%; /* Take full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER SECTION -->
+        <div class="header">
+            <h1>Web Technologies Online Lab Manual</h1>
+            <h2>BS Computer Engineering - [Your Full Name]</h2>
+            <a href="../index.html" class="nav-link">HOME (Not yet) &rarr;</a>
+            <a href="about_me.html" class="nav-link">About Me &rarr;</a>
+        </div>
+        
+        <!-- MAIN CONTENT: EXPERIMENTS GRID -->
+        <h2>Lab Experiments Index</h2>
+        <div class="experiments-grid">
+            
+            <!-- LAB 1 CARD -->
+            <div class="lab-card">
+                <h3>Experiment 1</h3>
+                <p>Introduction to HTML Basics (Headings, Paragraphs, Text Formatting).</p>
+                <!-- Relative link down into the Lab no 1 folder -->
+                <a href="Lab Work/Lab no 1/lab1.html" class="lab-link">View Lab 1 &rarr;</a>
+            </div>
+            
+            <!-- LAB 2 CARD (Assuming lab2.html is your previous index) -->
+            <div class="lab-card">
+                <h3>Experiment 2</h3>
+                <p>Creating HTML Document Structure, Lists, and Publishing on GitHub Pages.</p>
+                <a href="Lab Work/Lab no 2/lab2.html" class="lab-link">View Lab 2 &rarr;</a>
+            </div>
+
+            <!-- LAB 3 CARD -->
+            <div class="lab-card">
+                <h3>Experiment 3</h3>
+                <p>Working with Tables, Images, Nested Lists, and Hyperlinks.</p>
+                <a href="Lab Work/Lab no 3/lab3.html" class="lab-link">View Lab 3 &rarr;</a>
+            </div>
+
+            <!-- LAB 4 CARD -->
+            <div class="lab-card">
+                <h3>Experiment 4</h3>
+                <p>Applying CSS to HTML using Inline, Internal, and External Methods.</p>
+                <a href="Lab Work/Lab no 4/lab4.html" class="lab-link">View Lab 4 &rarr;</a>
+            </div>
+            
+            <!-- LAB 5 CARD -->
+            <div class="lab-card">
+                <h3>Experiment 5</h3>
+                <p>Exploring Advanced CSS Selectors (Type, Class, ID, Grouping, Pseudo).</p>
+                <a href="Lab Work/Lab no 5/lab5.html" class="lab-link">View Lab 5 &rarr;</a>
+            </div>
+
+            <!-- LAB 6 CARD -->
+            <div class="lab-card">
+                <h3>Experiment 6</h3>
+                <p>Web Responsiveness using Viewport, Media Queries, and CSS Flexbox.</p>
+                <a href="Lab Work/Lab no 6/lab6.html" class="lab-link">View Lab 6 &rarr;</a>
+            </div>
+            
+        </div>
+        
+        <hr>
+
+        <p style="text-align: center; font-size: 0.8em; color: #757575;">
+            Web Technologies CSC-336 | Developed and Maintained by [Your Name]
+        </p>
+
+    </div>
+
+</body>
+</html>
